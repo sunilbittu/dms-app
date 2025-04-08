@@ -13,33 +13,36 @@ export default function Page() {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white flex flex-col items-center justify-center px-4">
-            <div className="w-full max-w-md">
+        <div
+            className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white flex flex-col items-center justify-center px-4"
+            data-oid="eyln7::"
+        >
+            <div className="w-full max-w-md" data-oid="w7jumof">
                 {/* Logo */}
-                <div className="flex justify-center mb-8">
-                    <svg
-                        className="h-10 w-10"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z"
-                            fill="white"
-                        />
-                    </svg>
+                <div className="flex justify-center mb-8" data-oid="e2t_8o.">
+                    <img
+                        src="/images/logo.png"
+                        alt="Logo"
+                        className="h-10 w-auto"
+                        data-oid="4ec4c.b"
+                    />
                 </div>
 
                 {/* Heading */}
-                <h1 className="text-3xl font-medium text-center mb-2">Sign in</h1>
-                <p className="text-gray-400 text-center mb-8">Enter your credentials to continue</p>
+                <h1 className="text-3xl font-medium text-center mb-2" data-oid="vwxp4li">
+                    Sign in
+                </h1>
+                <p className="text-gray-400 text-center mb-8" data-oid="adg-kcj">
+                    Enter your credentials to continue
+                </p>
 
                 {/* Form */}
-                <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="space-y-2">
+                <form onSubmit={handleSubmit} className="space-y-6" data-oid="o.yejn6">
+                    <div className="space-y-2" data-oid=".24uy_q">
                         <label
                             htmlFor="username"
                             className="block text-sm font-medium text-gray-300"
+                            data-oid="pm.3z0."
                         >
                             Username
                         </label>
@@ -52,13 +55,15 @@ export default function Page() {
                             onChange={(e) => setUsername(e.target.value)}
                             className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none text-white"
                             placeholder="Enter your username"
+                            data-oid="t80w35f"
                         />
                     </div>
 
-                    <div className="space-y-2">
+                    <div className="space-y-2" data-oid="0gotgap">
                         <label
                             htmlFor="password"
                             className="block text-sm font-medium text-gray-300"
+                            data-oid="a5entsd"
                         >
                             Password
                         </label>
@@ -71,13 +76,15 @@ export default function Page() {
                             onChange={(e) => setPassword(e.target.value)}
                             className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none text-white"
                             placeholder="Enter your password"
+                            data-oid="-iuma3z"
                         />
                     </div>
 
-                    <div className="flex items-center justify-end">
+                    <div className="flex items-center justify-end" data-oid="1c_sobw">
                         <a
                             href="#"
                             className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
+                            data-oid="wtmk_lr"
                         >
                             Forgot password?
                         </a>
@@ -86,16 +93,21 @@ export default function Page() {
                     <button
                         type="submit"
                         className="w-full py-3 px-4 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+                        data-oid="h6syint"
                     >
                         Sign in
                     </button>
                 </form>
 
                 {/* Footer */}
-                <div className="mt-8 text-center">
-                    <p className="text-gray-400 text-sm">
+                <div className="mt-8 text-center" data-oid="-nsq7e0">
+                    <p className="text-gray-400 text-sm" data-oid="tv599yj">
                         Don't have an account?{' '}
-                        <a href="#" className="text-blue-400 hover:text-blue-300 transition-colors">
+                        <a
+                            href="#"
+                            className="text-blue-400 hover:text-blue-300 transition-colors"
+                            data-oid="vm8c5n8"
+                        >
                             Create one
                         </a>
                     </p>
@@ -103,7 +115,10 @@ export default function Page() {
             </div>
 
             {/* Bottom gradient accent */}
-            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
+            <div
+                className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
+                data-oid="7urh1_k"
+            ></div>
         </div>
     );
 }

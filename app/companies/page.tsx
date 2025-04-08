@@ -3,31 +3,45 @@
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
+import { useAuth } from '../context/AuthContext';
 
-const companies = [
+interface Company {
+    id: number;
+    name: string;
+    description: string;
+    status: 'Active' | 'Inactive';
+}
+
+const companies: Company[] = [
     {
         id: 1,
-        name: 'DSS Software Solutions Sdn. Bhd.',
-        description: 'Leading technology solutions provider',
+        name: 'Acme Corporation',
+        description: 'Global leader in innovative solutions',
         status: 'Active',
     },
     {
         id: 2,
-        name: 'Datadot Software Solution Pvt. Ltd. (INDIA)',
-        description: 'Global manufacturing enterprise',
+        name: 'TechCorp Industries',
+        description: 'Pioneering technology solutions',
         status: 'Active',
     },
-    { id: 3, name: 'APEC', description: 'Financial services innovator', status: 'Active' },
-    { id: 4, name: 'DSS23', description: 'Healthcare technology pioneer', status: 'Inactive' },
-    { id: 5, name: 'DSSsssddd', description: 'Retail and e-commerce leader', status: 'Active' },
-    { id: 6, name: 'DSa', description: 'Logistics and supply chain', status: 'Inactive' },
-    { id: 7, name: 'sdfds', description: 'Energy and utilities', status: 'Active' },
-    { id: 8, name: 'company-1', description: 'Telecommunications', status: 'Active' },
-    { id: 9, name: 'cdss', description: 'Education technology', status: 'Inactive' },
     {
-        id: 10,
-        name: 'DSS Software Solutions Sdn. Bhd. SG',
-        description: 'Singapore operations',
+        id: 3,
+        name: 'Global Dynamics',
+        description: 'Revolutionary research and development',
+        status: 'Inactive',
+    },
+    {
+        id: 4,
+        name: 'Quantum Enterprises',
+        description: 'Next-generation quantum computing',
+        status: 'Active',
+    },
+    {
+        id: 5,
+        name: 'Stellar Systems',
+        description: 'Space technology and exploration',
         status: 'Active',
     },
 ];
@@ -36,6 +50,7 @@ const ITEMS_PER_PAGE = 5;
 
 export default function CompaniesPage() {
     const router = useRouter();
+    const { logout, selectCompany } = useAuth();
     const [searchTerm, setSearchTerm] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
     const [viewMode, setViewMode] = useState<'list' | 'table'>('list');
@@ -45,13 +60,13 @@ export default function CompaniesPage() {
     const observerTarget = useRef(null);
 
     const handleLogout = () => {
+        logout();
         router.push('/');
     };
 
-    const handleCompanyClick = (companyId: number) => {
-        console.log('Company clicked:', companyId);
-        // Future: Navigate to company dashboard
-        // router.push(`/companies/${companyId}`);
+    const handleCompanyClick = (company: Company) => {
+        selectCompany({ id: company.id.toString(), name: company.name });
+        router.push(`/companies/${company.id}/dashboard`);
     };
 
     // Filter companies based on search term
@@ -102,19 +117,14 @@ export default function CompaniesPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-oid="9x1l908">
                     <div className="flex justify-between items-center py-4" data-oid="d07aihz">
                         <div className="flex items-center" data-oid="9lmygx.">
-                            <img
-                                src="/images/datadot-logo.png"
+                            <Image
+                                src="/images/logo-text.png"
                                 alt="Datadot Logo"
-                                className="h-8 w-auto"
-                                data-oid="287bw:x"
+                                width={150}
+                                height={40}
+                                priority
+                                data-oid="vgk.8:v"
                             />
-
-                            <span
-                                className="ml-2 text-sm text-orange-500 font-medium"
-                                data-oid="wndtflp"
-                            >
-                                Business Re-engineering
-                            </span>
                         </div>
                         <button
                             onClick={handleLogout}
@@ -214,6 +224,12 @@ export default function CompaniesPage() {
                                         className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                                         data-oid="3r9sewi"
                                     >
+                                        Status
+                                    </th>
+                                    <th
+                                        className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                        data-oid="kqt788."
+                                    >
                                         Actions
                                     </th>
                                 </tr>
@@ -223,8 +239,8 @@ export default function CompaniesPage() {
                                     <tr
                                         key={company.id}
                                         className="hover:bg-gray-50 cursor-pointer"
-                                        onClick={() => handleCompanyClick(company.id)}
-                                        data-oid="y-k6ckm"
+                                        onClick={(e) => handleCompanyClick(company)}
+                                        data-oid="5pa35fp"
                                     >
                                         <td
                                             className="px-6 py-4 whitespace-nowrap"
@@ -246,14 +262,26 @@ export default function CompaniesPage() {
                                             </div>
                                         </td>
                                         <td
-                                            className="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                                            className="px-6 py-4 whitespace-nowrap"
                                             data-oid="kk_zma5"
                                         >
+                                            <span
+                                                className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
+                                                    company.status === 'Active'
+                                                        ? 'bg-green-100 text-green-800'
+                                                        : 'bg-red-100 text-red-800'
+                                                }`}
+                                                data-oid="d7parfl"
+                                            >
+                                                {company.status}
+                                            </span>
+                                        </td>
+                                        <td
+                                            className="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                                            data-oid="4zwzt4v"
+                                        >
                                             <button
-                                                onClick={(e) => {
-                                                    e.stopPropagation();
-                                                    handleCompanyClick(company.id);
-                                                }}
+                                                onClick={(e) => handleCompanyClick(company)}
                                                 className="text-blue-600 hover:text-blue-900"
                                                 data-oid="ay2zkgj"
                                             >
@@ -270,7 +298,7 @@ export default function CompaniesPage() {
                         {displayedCompanies.map((company) => (
                             <div
                                 key={company.id}
-                                onClick={() => handleCompanyClick(company.id)}
+                                onClick={(e) => handleCompanyClick(company)}
                                 className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer border border-gray-200"
                                 data-oid="_2tj_.-"
                             >

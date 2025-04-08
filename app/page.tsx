@@ -14,13 +14,13 @@ export default function Page() {
 
     return (
         <div
-            className="min-h-screen bg-cover bg-center bg-no-repeat text-white flex flex-col items-center justify-center px-4 relative"
+            className="min-h-screen bg-cover bg-center bg-no-repeat text-white flex items-center justify-end px-4 relative"
             style={{ backgroundImage: 'url("/images/bg.png")' }}
             data-oid="eyln7::"
         >
             {/* Semi-transparent overlay */}
 
-            <div className="w-full max-w-md relative z-10" data-oid="w7jumof" key="olk-1SB6">
+            <div className="w-full max-w-md relative z-10 mr-16" data-oid="w7jumof" key="olk-1SB6">
                 {/* Logo */}
                 <div className="flex flex-col items-center mb-12" data-oid="e2t_8o.">
                     <img

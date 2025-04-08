@@ -6,7 +6,7 @@ export default function Page() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         // Handle login logic here
         console.log('Login attempt with:', username);
@@ -14,10 +14,14 @@ export default function Page() {
 
     return (
         <div
-            className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white flex flex-col items-center justify-center px-4"
+            className="min-h-screen bg-cover bg-center bg-no-repeat text-white flex flex-col items-center justify-center px-4 relative"
+            style={{ backgroundImage: 'url("/images/bg.png")' }}
             data-oid="eyln7::"
         >
-            <div className="w-full max-w-md" data-oid="w7jumof">
+            {/* Semi-transparent overlay */}
+            <div className="absolute inset-0 bg-black/60" data-oid="m0j-j4m"></div>
+
+            <div className="w-full max-w-md relative z-10" data-oid="w7jumof">
                 {/* Logo */}
                 <div className="flex justify-center mb-8" data-oid="e2t_8o.">
                     <img

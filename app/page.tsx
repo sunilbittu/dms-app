@@ -19,21 +19,24 @@ export default function Page() {
             data-oid="eyln7::"
         >
             {/* Semi-transparent overlay */}
-            <div className="absolute inset-0 bg-black/60" data-oid="m0j-j4m"></div>
 
-            <div className="w-full max-w-md relative z-10" data-oid="w7jumof">
+            <div className="w-full max-w-md relative z-10" data-oid="w7jumof" key="olk-1SB6">
                 {/* Logo */}
-                <div className="flex justify-center mb-8" data-oid="e2t_8o.">
+                <div className="flex flex-col items-center mb-12" data-oid="e2t_8o.">
                     <img
-                        src="/images/logo.png"
-                        alt="Logo"
-                        className="h-10 w-auto"
+                        src="/images/datadot-logo.png"
+                        alt="Datadot Logo"
+                        className="h-16 w-auto mb-2"
                         data-oid="4ec4c.b"
                     />
+
+                    <div className="text-sm text-orange-500 font-medium" data-oid="plowta-">
+                        Business Re-engineering
+                    </div>
                 </div>
 
                 {/* Heading */}
-                <h1 className="text-3xl font-medium text-center mb-2" data-oid="vwxp4li">
+                <h1 className="text-3xl font-medium text-center mb-6" data-oid="vwxp4li">
                     Sign in
                 </h1>
 
@@ -100,6 +103,7 @@ export default function Page() {
                     </button>
                 </form>
             </div>
+            <div className="absolute inset-0 bg-black/60" data-oid="m0j-j4m"></div>
 
             {/* Bottom gradient accent */}
             <div

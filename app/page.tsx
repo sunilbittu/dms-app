@@ -9,8 +9,15 @@ export default function Page() {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        // Handle login logic here
-        console.log('Login attempt with:', username);
+
+        // Dummy login check
+        if (username === 'admin' && password === 'admin123') {
+            alert('Login successful!');
+            // Here you would typically redirect to the dashboard
+            // router.push('/dashboard');
+        } else {
+            alert('Invalid credentials. Please use the demo credentials provided.');
+        }
     };
 
     return (
@@ -20,6 +27,7 @@ export default function Page() {
             data-oid="eyln7::"
         >
             {/* Semi-transparent overlay */}
+            <div className="absolute inset-0 bg-black/40" data-oid="m0j-j4m"></div>
 
             <div className="w-full max-w-md relative z-10 mr-16" data-oid="w7jumof" key="olk-1SB6">
                 {/* Logo */}
@@ -37,9 +45,36 @@ export default function Page() {
                 </div>
 
                 {/* Heading */}
-                <h1 className="text-3xl font-medium text-center mb-6" data-oid="vwxp4li">
+                <h1 className="text-3xl font-medium text-center mb-2" data-oid="f5dndev">
                     Sign in
                 </h1>
+                <p className="text-gray-400 text-center mb-8" data-oid="k7ixpp.">
+                    Enter your credentials to continue
+                </p>
+
+                {/* Dummy Credentials */}
+                <div
+                    className="mb-6 p-4 bg-gray-800/50 border border-gray-700 rounded-lg"
+                    data-oid="bxjcqdj"
+                >
+                    <h3 className="text-sm font-medium text-gray-300 mb-2" data-oid="2forpf7">
+                        Demo Credentials:
+                    </h3>
+                    <div className="space-y-1 text-sm" data-oid="xkr:pun">
+                        <p className="text-gray-400" data-oid="57_ruun">
+                            Username:{' '}
+                            <span className="text-blue-400" data-oid="p83mqy0">
+                                admin
+                            </span>
+                        </p>
+                        <p className="text-gray-400" data-oid=":dwz5h9">
+                            Password:{' '}
+                            <span className="text-blue-400" data-oid="558ifz2">
+                                admin123
+                            </span>
+                        </p>
+                    </div>
+                </div>
 
                 {/* Form */}
                 <form onSubmit={handleSubmit} className="space-y-6" data-oid="o.yejn6">
@@ -104,7 +139,6 @@ export default function Page() {
                     </button>
                 </form>
             </div>
-            <div className="absolute inset-0 bg-black/60" data-oid="m0j-j4m"></div>
 
             {/* Bottom gradient accent */}
             <div

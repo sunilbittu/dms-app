@@ -13,12 +13,14 @@ export default function TopNav() {
         >
             {/* Right Section */}
             <div className="flex items-center space-x-4" data-oid="jrrwusl">
-                {/* Notifications */}
+                {/* Email */}
                 <button
                     className="p-2 text-gray-600 hover:text-gray-900 relative"
+                    title="Messages"
                     data-oid="jvf69cz"
                 >
                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
                         className="w-6 h-6"
                         fill="none"
                         stroke="currentColor"
@@ -29,7 +31,7 @@ export default function TopNav() {
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth={2}
-                            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                             data-oid="4sffwxy"
                         />
                     </svg>

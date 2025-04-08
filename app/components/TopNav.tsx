@@ -2,9 +2,19 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { useAuth } from '../context/AuthContext';
 
 export default function TopNav() {
     const [isProfileOpen, setIsProfileOpen] = useState(false);
+    const router = useRouter();
+    const { logout } = useAuth();
+
+    const handleSignOut = (e) => {
+        e.preventDefault();
+        logout();
+        router.push('/');
+    };
 
     return (
         <div
@@ -114,6 +124,7 @@ export default function TopNav() {
                             <div className="border-t border-gray-100" data-oid="xv0fhcb"></div>
                             <a
                                 href="#"
+                                onClick={handleSignOut}
                                 className="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100"
                                 data-oid="3g1kekx"
                             >

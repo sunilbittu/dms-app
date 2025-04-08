@@ -54,23 +54,33 @@ export default function CompanyDashboardPage({ params }: { params: { id: string 
                             </div>
                         </div>
 
-                        {/* Desktop Menu */}
-                        <div className="hidden md:flex items-center space-x-4" data-oid="p:hb9xx">
-                            {menuItems.map((item) => (
+                        {/* User Profile */}
+                        <div className="flex items-center space-x-4" data-oid="p:hb9xx">
+                            <div className="relative" data-oid="y.hx6yo">
                                 <button
-                                    key={item.name}
-                                    onClick={() => handleMenuClick(item.path)}
-                                    className={`px-3 py-2 rounded-md text-sm font-medium flex items-center space-x-2 ${
-                                        activeMenu === item.path
-                                            ? 'bg-blue-100 text-blue-700'
-                                            : 'text-gray-700 hover:bg-gray-100'
-                                    }`}
-                                    data-oid="v.9.7qw"
+                                    className="flex items-center space-x-2 focus:outline-none"
+                                    data-oid="j70n9dy"
                                 >
-                                    <span data-oid="a::7291">{item.icon}</span>
-                                    <span data-oid="yxeqw3g">{item.name}</span>
+                                    <div
+                                        className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center"
+                                        data-oid="eucijl6"
+                                    >
+                                        <svg
+                                            className="w-5 h-5 text-gray-500"
+                                            fill="currentColor"
+                                            viewBox="0 0 20 20"
+                                            data-oid="8t_ma1z"
+                                        >
+                                            <path
+                                                fillRule="evenodd"
+                                                d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                                                clipRule="evenodd"
+                                                data-oid="vf2jfqy"
+                                            />
+                                        </svg>
+                                    </div>
                                 </button>
-                            ))}
+                            </div>
                         </div>
 
                         {/* Mobile menu button */}

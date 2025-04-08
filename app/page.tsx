@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function Page() {
     const [username, setUsername] = useState('');
@@ -85,13 +86,13 @@ export default function Page() {
                     </div>
 
                     <div className="flex items-center justify-end" data-oid="1c_sobw">
-                        <a
-                            href="#"
+                        <Link
+                            href="/forgot-password"
                             className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
                             data-oid="wtmk_lr"
                         >
                             Forgot password?
-                        </a>
+                        </Link>
                     </div>
 
                     <button

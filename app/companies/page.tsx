@@ -176,25 +176,57 @@ export default function CompaniesPage() {
                         <div className="flex space-x-2" data-oid="n19k7oq">
                             <button
                                 onClick={() => setViewMode('list')}
-                                className={`px-3 py-2 rounded-lg ${
+                                title="List View"
+                                className={`p-2 rounded-lg ${
                                     viewMode === 'list'
                                         ? 'bg-blue-600 text-white'
                                         : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                                 }`}
                                 data-oid="7-89m04"
                             >
-                                List View
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-5 w-5"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    data-oid="fc9uyo9"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M4 6h16M4 10h16M4 14h16M4 18h16"
+                                        data-oid=":3sl:91"
+                                    />
+                                </svg>
                             </button>
                             <button
                                 onClick={() => setViewMode('table')}
-                                className={`px-3 py-2 rounded-lg ${
+                                title="Table View"
+                                className={`p-2 rounded-lg ${
                                     viewMode === 'table'
                                         ? 'bg-blue-600 text-white'
                                         : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                                 }`}
                                 data-oid="288zvie"
                             >
-                                Table View
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-5 w-5"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    data-oid="5tel-bs"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M3 10h18M3 14h18M3 4h18M3 18h18M3 8h18"
+                                        data-oid="ja3n0ix"
+                                    />
+                                </svg>
                             </button>
                         </div>
                     </div>

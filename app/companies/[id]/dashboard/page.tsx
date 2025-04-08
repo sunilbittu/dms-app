@@ -35,8 +35,31 @@ export default function CompanyDashboardPage({ params }: { params: { id: string 
             <nav className="bg-white shadow-sm" data-oid="eq6:fz6">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-oid="90e98_x">
                     <div className="flex justify-between h-16" data-oid="6eqom:u">
-                        {/* Logo and Company Name */}
+                        {/* Back Arrow and Logo */}
                         <div className="flex items-center" data-oid="jry0u08">
+                            <button
+                                onClick={() => router.push('/companies')}
+                                className="mr-4 p-1 rounded-full hover:bg-gray-100"
+                                title="Back to Companies"
+                                data-oid="j:jg6x-"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-6 w-6 text-gray-600"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    data-oid="x.2ysg_"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                                        data-oid="c2xifu4"
+                                    />
+                                </svg>
+                            </button>
                             <div className="flex-shrink-0 flex items-center" data-oid="j:k2m5l">
                                 <img
                                     src="/images/datadot-logo.png"

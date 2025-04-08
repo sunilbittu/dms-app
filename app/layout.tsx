@@ -13,10 +13,24 @@ function RootLayoutContent({ children }: { children: React.ReactNode }) {
     const pathname = usePathname();
     const { isAuthenticated, selectedCompany } = useAuth();
     const isLoginPage = isAuthRoute(pathname);
-    const showNavigation = isAuthenticated && !isLoginPage && selectedCompany;
+
+    // Check if we're on the companies page
+    const isCompaniesPage = pathname === '/companies';
+
+    // Don't show navigation on login pages or the companies page
+    const showNavigation = isAuthenticated && !isLoginPage && selectedCompany && !isCompaniesPage;
+
+    // For companies page, return a different layout without sidebar
+    if (isCompaniesPage) {
+        return (
+            <div className="min-h-screen bg-white" data-oid="d01bovx">
+                {children}
+            </div>
+        );
+    }
 
     return (
-        <div className="flex min-h-screen bg-white" data-oid="d01bovx">
+        <div className="flex min-h-screen bg-white" data-oid="nn_z97g">
             {showNavigation && <Sidebar data-oid="hsd9iz6" />}
             <div className={`flex-1 ${showNavigation ? 'ml-64' : ''}`} data-oid="02t7vwg">
                 {showNavigation && <TopNav data-oid="s4f0nvp" />}

@@ -32,9 +32,6 @@ export default function Page() {
                 <h1 className="text-3xl font-medium text-center mb-2" data-oid="vwxp4li">
                     Sign in
                 </h1>
-                <p className="text-gray-400 text-center mb-8" data-oid="adg-kcj">
-                    Enter your credentials to continue
-                </p>
 
                 {/* Form */}
                 <form onSubmit={handleSubmit} className="space-y-6" data-oid="o.yejn6">
@@ -98,20 +95,6 @@ export default function Page() {
                         Sign in
                     </button>
                 </form>
-
-                {/* Footer */}
-                <div className="mt-8 text-center" data-oid="-nsq7e0">
-                    <p className="text-gray-400 text-sm" data-oid="tv599yj">
-                        Don't have an account?{' '}
-                        <a
-                            href="#"
-                            className="text-blue-400 hover:text-blue-300 transition-colors"
-                            data-oid="vm8c5n8"
-                        >
-                            Create one
-                        </a>
-                    </p>
-                </div>
             </div>
 
             {/* Bottom gradient accent */}

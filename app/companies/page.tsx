@@ -114,27 +114,7 @@ export default function CompaniesPage() {
         <div className="min-h-screen bg-gray-50" data-oid=":v2hak2">
             {/* Header */}
             <header className="bg-white shadow-sm" data-oid="in-cu_w">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-oid="9x1l908">
-                    <div className="flex justify-between items-center py-4" data-oid="d07aihz">
-                        <div className="flex items-center" data-oid="9lmygx.">
-                            <Image
-                                src="/images/logo-text.png"
-                                alt="Datadot Logo"
-                                width={150}
-                                height={40}
-                                priority
-                                data-oid="vgk.8:v"
-                            />
-                        </div>
-                        <button
-                            onClick={handleLogout}
-                            className="px-4 py-2 bg-red-600 hover:bg-red-500 text-white font-medium rounded-lg transition-colors"
-                            data-oid="sx3mf3g"
-                        >
-                            Logout
-                        </button>
-                    </div>
-                </div>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-oid="9x1l908"></div>
             </header>
 
             {/* Main Content */}

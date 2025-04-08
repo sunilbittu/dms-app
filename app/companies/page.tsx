@@ -53,7 +53,7 @@ export default function CompaniesPage() {
     const { logout, selectCompany } = useAuth();
     const [searchTerm, setSearchTerm] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
-    const [viewMode, setViewMode] = useState<'list' | 'table'>('list');
+    const [viewMode, setViewMode] = useState<'list' | 'table' | 'tiles'>('list');
     const [displayedCompanies, setDisplayedCompanies] = useState(
         companies.slice(0, ITEMS_PER_PAGE),
     );
@@ -208,6 +208,33 @@ export default function CompaniesPage() {
                                     />
                                 </svg>
                             </button>
+                            <button
+                                onClick={() => setViewMode('tiles')}
+                                title="Tiles View"
+                                className={`p-2 rounded-lg ${
+                                    viewMode === 'tiles'
+                                        ? 'bg-blue-600 text-white'
+                                        : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                                }`}
+                                data-oid="rsrwaa_"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-5 w-5"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    data-oid="m:ks8lu"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z"
+                                        data-oid="75:x9lq"
+                                    />
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -231,12 +258,6 @@ export default function CompaniesPage() {
                                         data-oid="oz08b2g"
                                     >
                                         Description
-                                    </th>
-                                    <th
-                                        className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                                        data-oid="3r9sewi"
-                                    >
-                                        Status
                                     </th>
                                     <th
                                         className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
@@ -274,21 +295,6 @@ export default function CompaniesPage() {
                                             </div>
                                         </td>
                                         <td
-                                            className="px-6 py-4 whitespace-nowrap"
-                                            data-oid="kk_zma5"
-                                        >
-                                            <span
-                                                className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
-                                                    company.status === 'Active'
-                                                        ? 'bg-green-100 text-green-800'
-                                                        : 'bg-red-100 text-red-800'
-                                                }`}
-                                                data-oid="d7parfl"
-                                            >
-                                                {company.status}
-                                            </span>
-                                        </td>
-                                        <td
                                             className="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
                                             data-oid="4zwzt4v"
                                         >
@@ -305,7 +311,7 @@ export default function CompaniesPage() {
                             </tbody>
                         </table>
                     </div>
-                ) : (
+                ) : viewMode === 'list' ? (
                     <div className="space-y-4" data-oid=".5cnv0p">
                         {displayedCompanies.map((company) => (
                             <div
@@ -315,17 +321,35 @@ export default function CompaniesPage() {
                                 data-oid="_2tj_.-"
                             >
                                 <h2
-                                    className="text-xl font-semibold text-gray-900 mb-2"
+                                    className="text-xl font-semibold text-gray-900"
                                     data-oid="ngth53y"
                                 >
                                     {company.name}
                                 </h2>
-                                <p className="text-gray-600" data-oid="9t9sso_">
-                                    {company.description}
-                                </p>
                             </div>
                         ))}
                         <div ref={observerTarget} className="h-4" data-oid="mei1pki"></div>
+                    </div>
+                ) : (
+                    <div
+                        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+                        data-oid="2qli7a5"
+                    >
+                        {filteredCompanies.map((company) => (
+                            <div
+                                key={company.id}
+                                onClick={(e) => handleCompanyClick(company)}
+                                className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer border border-gray-200 flex items-center justify-center h-32"
+                                data-oid="id2di2q"
+                            >
+                                <h3
+                                    className="text-lg font-medium text-gray-900 text-center"
+                                    data-oid="2edau1m"
+                                >
+                                    {company.name}
+                                </h3>
+                            </div>
+                        ))}
                     </div>
                 )}
             </main>

@@ -78,7 +78,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
                 selectCompany,
                 clearSelectedCompany,
             }}
-            data-oid="2:93ra9"
+            data-oid=":jckomb"
         >
             {children}
         </AuthContext.Provider>

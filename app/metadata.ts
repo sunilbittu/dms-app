@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Datadot DMS',
+    title: 'DMS Software Solutions',
     description: 'Document Management System',
     icons: {
         icon: '/images/datadot-logo.png',

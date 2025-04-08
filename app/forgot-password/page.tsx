@@ -27,45 +27,45 @@ export default function ForgotPassword() {
         <div
             className="min-h-screen bg-cover bg-center bg-no-repeat text-white flex items-center justify-end px-4 relative"
             style={{ backgroundImage: 'url("/images/bg.png")' }}
-            data-oid="ljzsdg0"
+            data-oid="pforpo0"
         >
             {/* Semi-transparent overlay */}
-            <div className="absolute inset-0 bg-black/40" data-oid="64vwfnr"></div>
+            <div className="absolute inset-0 bg-black/40" data-oid="mhwaz02"></div>
 
-            <div className="w-full max-w-md relative z-10 mr-16" data-oid="zl7h7zw">
+            <div className="w-full max-w-md relative z-10 mr-16" data-oid="0r9evh4">
                 {/* Logo */}
-                <div className="flex flex-col items-center mb-12" data-oid="8stm.p5">
+                <div className="flex flex-col items-center mb-12" data-oid="cfnsul2">
                     <img
                         src="/images/datadot-logo.png"
                         alt="Datadot Logo"
                         className="h-16 w-auto mb-2"
-                        data-oid=".rkiytu"
+                        data-oid="7-h32qv"
                     />
 
-                    <div className="text-sm text-orange-500 font-medium" data-oid="wsjdky1">
+                    <div className="text-sm text-orange-500 font-medium" data-oid="7e.rr9w">
                         Business Re-engineering
                     </div>
                 </div>
 
                 {/* Heading */}
-                <h1 className="text-3xl font-medium text-center mb-6" data-oid="yikl:bt">
+                <h1 className="text-3xl font-medium text-center mb-6" data-oid="g5w.7k2">
                     Reset Password
                 </h1>
 
                 {message ? (
                     <div
                         className="p-4 mb-6 bg-green-500/20 border border-green-500 rounded-lg text-center"
-                        data-oid=":c-bhjm"
+                        data-oid="5zdvjtg"
                     >
                         {message}
                     </div>
                 ) : (
-                    <form onSubmit={handleSubmit} className="space-y-6" data-oid="7n4r-1e">
-                        <div className="space-y-2" data-oid="mge0zs:">
+                    <form onSubmit={handleSubmit} className="space-y-6" data-oid=":r:cu84">
+                        <div className="space-y-2" data-oid="xi0hg2h">
                             <label
                                 htmlFor="email"
                                 className="block text-sm font-medium text-gray-300"
-                                data-oid="hr87gy0"
+                                data-oid="tm-tjf6"
                             >
                                 Email Address
                             </label>
@@ -78,18 +78,18 @@ export default function ForgotPassword() {
                                 onChange={(e) => setEmail(e.target.value)}
                                 className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none text-white"
                                 placeholder="Enter your email"
-                                data-oid="lls6_rf"
+                                data-oid="xu-gcg:"
                             />
                         </div>
 
                         <div
                             className="flex items-center justify-between space-x-4"
-                            data-oid="d4szoy2"
+                            data-oid="mwm4ndf"
                         >
                             <Link
                                 href="/"
                                 className="px-4 py-3 bg-red-600 hover:bg-red-500 text-white font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-gray-900"
-                                data-oid="tkjtkfj"
+                                data-oid="5pv4gvu"
                             >
                                 Cancel
                             </Link>
@@ -97,17 +97,17 @@ export default function ForgotPassword() {
                                 type="submit"
                                 disabled={isSubmitting}
                                 className="flex-1 py-3 px-4 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900 disabled:opacity-50 disabled:cursor-not-allowed"
-                                data-oid="gyk1i1m"
+                                data-oid="3bz9r_z"
                             >
                                 {isSubmitting ? 'Sending...' : 'Reset Password'}
                             </button>
                         </div>
 
-                        <div className="text-center" data-oid="ock1n52">
+                        <div className="text-center" data-oid="in0uu7k">
                             <Link
                                 href="/"
                                 className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
-                                data-oid="0-e:hpm"
+                                data-oid="0.swh9z"
                             >
                                 Back to Login
                             </Link>
@@ -119,7 +119,7 @@ export default function ForgotPassword() {
             {/* Bottom gradient accent */}
             <div
                 className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
-                data-oid="8dz2p14"
+                data-oid="jds.mqj"
             ></div>
         </div>
     );

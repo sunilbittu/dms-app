@@ -81,10 +81,10 @@ export default function Sidebar() {
     return (
         <div
             className="w-64 bg-[#1E1E1E] fixed left-0 top-0 h-screen overflow-y-auto"
-            data-oid="d66h5__"
+            data-oid="b3q5k8w"
         >
             {/* Main Menu Items */}
-            <div className="py-4 px-4 space-y-3" data-oid="-_drfwf">
+            <div className="py-4 px-4 space-y-3" data-oid="2o5-wyy">
                 {mainMenuItems.map((item) => (
                     <Link
                         key={item.path}
@@ -92,16 +92,16 @@ export default function Sidebar() {
                         className={`flex items-center text-white py-2 px-2 rounded hover:bg-gray-800 ${
                             pathname === item.path ? 'bg-gray-800' : ''
                         }`}
-                        data-oid="xe:re.a"
+                        data-oid="4qd_q6:"
                     >
-                        <span className="mr-3" data-oid="w6zc4z:">
+                        <span className="mr-3" data-oid="aw_jv01">
                             {item.icon}
                         </span>
-                        <span data-oid="s765_7v">{item.name}</span>
+                        <span data-oid="9ldmnla">{item.name}</span>
                         {item.count && (
                             <span
                                 className="ml-2 bg-gray-700 px-2 py-0.5 rounded-full text-xs"
-                                data-oid="ute.xw5"
+                                data-oid="p:.ct1l"
                             >
                                 {item.count}
                             </span>
@@ -111,20 +111,20 @@ export default function Sidebar() {
             </div>
 
             {/* Admin Tools Divider */}
-            <div className="px-4 py-2" data-oid="nd0l5pv">
-                <div className="flex items-center" data-oid="g0pvr:7">
-                    <div className="flex-grow border-t border-gray-600" data-oid="l6tdneh"></div>
-                    <span className="px-2 text-gray-400 text-sm" data-oid="b-mmukd">
+            <div className="px-4 py-2" data-oid="v1mjxk9">
+                <div className="flex items-center" data-oid="h:alluh">
+                    <div className="flex-grow border-t border-gray-600" data-oid="zdz.qe4"></div>
+                    <span className="px-2 text-gray-400 text-sm" data-oid="3y0rs5z">
                         Admin Tools
                     </span>
-                    <div className="flex-grow border-t border-gray-600" data-oid="enke9ky"></div>
+                    <div className="flex-grow border-t border-gray-600" data-oid="lb6z6g9"></div>
                 </div>
             </div>
 
             {/* Admin Menu Items */}
-            <div className="px-4 space-y-1" data-oid="vnabbau">
+            <div className="px-4 space-y-1" data-oid="gxo8d0z">
                 {adminMenuItems.map((item) => (
-                    <div key={item.path} data-oid="2cbkxnj">
+                    <div key={item.path} data-oid="jo:3caj">
                         <Link
                             href={item.hasSubmenu ? '#' : item.path}
                             onClick={item.hasSubmenu ? () => toggleSection(item.name) : undefined}
@@ -133,12 +133,12 @@ export default function Sidebar() {
                                     ? 'bg-gray-800'
                                     : ''
                             }`}
-                            data-oid="fvhjhsz"
+                            data-oid="_7slihh"
                         >
-                            <span className="mr-3" data-oid="nndmwnb">
+                            <span className="mr-3" data-oid="hikimzl">
                                 {item.icon}
                             </span>
-                            <span data-oid="pz5dg:t">{item.name}</span>
+                            <span data-oid="q8g-eja">{item.name}</span>
                             {item.hasSubmenu && (
                                 <svg
                                     className={`ml-auto w-5 h-5 transform transition-transform ${
@@ -146,13 +146,13 @@ export default function Sidebar() {
                                     }`}
                                     fill="currentColor"
                                     viewBox="0 0 20 20"
-                                    data-oid="pyn3a2y"
+                                    data-oid="ekgks:0"
                                 >
                                     <path
                                         fillRule="evenodd"
                                         d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                         clipRule="evenodd"
-                                        data-oid="sxkjjou"
+                                        data-oid="vcoj0bw"
                                     />
                                 </svg>
                             )}
@@ -160,7 +160,7 @@ export default function Sidebar() {
 
                         {/* Submenu Items */}
                         {item.hasSubmenu && expandedSections[item.name] && item.submenuItems && (
-                            <div className="ml-8 space-y-1 mt-1" data-oid="z8q-lvs">
+                            <div className="ml-8 space-y-1 mt-1" data-oid="g:trn6p">
                                 {item.submenuItems.map((subItem) => (
                                     <Link
                                         key={subItem.path}
@@ -170,7 +170,7 @@ export default function Sidebar() {
                                                 ? 'text-white'
                                                 : 'text-gray-400 hover:text-white'
                                         }`}
-                                        data-oid="syqb3fq"
+                                        data-oid="tz-1:su"
                                     >
                                         {subItem.name}
                                     </Link>

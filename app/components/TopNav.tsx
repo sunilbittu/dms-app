@@ -8,44 +8,9 @@ export default function TopNav() {
 
     return (
         <div
-            className="h-16 bg-white border-b border-gray-200 fixed top-0 right-0 left-64 z-30 flex items-center justify-between px-6"
+            className="h-16 bg-white border-b border-gray-200 fixed top-0 right-0 left-64 z-30 flex items-center justify-end px-6"
             data-oid="srh:1i5"
         >
-            {/* Search Bar */}
-            <div className="flex-1 max-w-3xl" data-oid="4tljanu">
-                <div className="relative" data-oid="m04ptn4">
-                    <input
-                        type="text"
-                        placeholder="Search..."
-                        className="w-full px-4 py-2 pl-10 text-sm text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
-                        data-oid="annvzjh"
-                        key="olk-lcYo"
-                    />
-
-                    <div
-                        className="absolute inset-y-0 left-0 flex items-center pl-3"
-                        data-oid="uc_w-c1"
-                        key="olk-rx2A"
-                    >
-                        <svg
-                            className="w-5 h-5 text-gray-400"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            data-oid="m2696.a"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                                data-oid="ch.pnep"
-                            />
-                        </svg>
-                    </div>
-                </div>
-            </div>
-
             {/* Right Section */}
             <div className="flex items-center space-x-4" data-oid="jrrwusl">
                 {/* Notifications */}

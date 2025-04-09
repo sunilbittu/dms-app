@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'standalone',
-    distDir: process.env.NODE_ENV === 'production' ? '.next-prod' : '.next',
+    distDir: '.next',
     typescript: {
         ignoreBuildErrors: true,
     },
@@ -20,4 +20,5 @@ const nextConfig = {
         return config;
     },
 };
+
 export default nextConfig;

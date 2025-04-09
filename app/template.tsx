@@ -19,18 +19,18 @@ function TemplateContent({ children }: { children: React.ReactNode }) {
     // For companies page, return a different layout without sidebar
     if (isCompaniesPage) {
         return (
-            <div className="min-h-screen bg-white" data-oid="95u.ngc">
+            <div className="min-h-screen bg-white" data-oid="zzjqcvv">
                 {children}
             </div>
         );
     }
 
     return (
-        <div className="flex min-h-screen bg-white" data-oid="9g1kbno">
-            {showNavigation && <Sidebar data-oid="lvtx56w" />}
-            <div className={`flex-1 ${showNavigation ? 'ml-64' : ''}`} data-oid="605y.c6">
-                {showNavigation && <TopNav data-oid="ce0._qn" />}
-                <main className={`${showNavigation ? 'pt-16 px-6' : ''}`} data-oid="d3-.6br">
+        <div className="flex min-h-screen bg-white" data-oid="fct0b5k">
+            {showNavigation && <Sidebar data-oid="0xahc5b" />}
+            <div className={`flex-1 ${showNavigation ? 'ml-64' : ''}`} data-oid="1w7dfeg">
+                {showNavigation && <TopNav data-oid="-akh73x" />}
+                <main className={`${showNavigation ? 'pt-16 px-6' : ''}`} data-oid="g_rwibc">
                     {children}
                 </main>
             </div>
@@ -40,8 +40,8 @@ function TemplateContent({ children }: { children: React.ReactNode }) {
 
 export default function Template({ children }: { children: React.ReactNode }) {
     return (
-        <AuthProvider data-oid=":_26n.b">
-            <TemplateContent data-oid="re7zgus">{children}</TemplateContent>
+        <AuthProvider data-oid="g99tgui">
+            <TemplateContent data-oid=".r4vjbp">{children}</TemplateContent>
         </AuthProvider>
     );
 }

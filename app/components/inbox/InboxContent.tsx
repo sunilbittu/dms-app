@@ -18,108 +18,108 @@ export function InboxContent() {
     ]);
 
     return (
-        <div className="p-6" data-oid="p51cqrk">
-            <div className="flex items-center justify-between mb-8" data-oid="713m0en">
-                <div className="flex gap-2" data-oid="yn9dq5h">
-                    <Button variant="primary" data-oid="-a008:l">
+        <div className="p-6" data-oid="-3x.otk">
+            <div className="flex items-center justify-between mb-8" data-oid="hpkpnrr">
+                <div className="flex gap-2" data-oid="uy_oqus">
+                    <Button variant="primary" data-oid="vawd..o">
                         Upload
                     </Button>
                     <Input
                         placeholder="Search docs, tags, etc."
                         className="w-[300px]"
-                        data-oid="sr6e0ak"
+                        data-oid="kl891tg"
                     />
                 </div>
-                <div className="flex gap-4" data-oid="sa.jno6">
+                <div className="flex gap-4" data-oid="k03xrr2">
                     <Button
                         variant="outline"
                         className="flex items-center gap-2"
-                        data-oid="me_4ted"
+                        data-oid="iyzwfny"
                     >
-                        <span data-oid="qgje764">Create Folder</span>
+                        <span data-oid="djo-95e">Create Folder</span>
                     </Button>
                     <Button
                         variant="outline"
                         className="flex items-center gap-2"
-                        data-oid="8w3zxq4"
+                        data-oid="ju10-dw"
                     >
-                        <span data-oid="sg332pr">Advanced Search</span>
+                        <span data-oid="ja8u_mf">Advanced Search</span>
                     </Button>
                     <Button
                         variant="outline"
                         className="flex items-center gap-2"
-                        data-oid="m5vvsus"
+                        data-oid="sbbx.w7"
                     >
-                        <span data-oid="l62i6iz">Audit Log</span>
+                        <span data-oid="1a4dgqx">Audit Log</span>
                     </Button>
                     <Button
                         variant="outline"
                         className="flex items-center gap-2"
-                        data-oid="qiai79g"
+                        data-oid="0:vb-9."
                     >
-                        <span data-oid="z0187zm">Numbering</span>
+                        <span data-oid=":9gt:ai">Numbering</span>
                     </Button>
                 </div>
             </div>
 
-            <div className="mb-8" data-oid="53m8mm8">
-                <h2 className="text-xl font-semibold mb-4" data-oid="t7ob71b">
+            <div className="mb-8" data-oid="4i-1xy0">
+                <h2 className="text-xl font-semibold mb-4" data-oid="n.uawz8">
                     My Docs: Inbox
                 </h2>
-                <table className="w-full" data-oid="fgizj3p">
-                    <thead data-oid="e:5ll3h">
-                        <tr className="border-b" data-oid="j6y8m1f">
-                            <th className="text-left py-2" data-oid="_cmzqtz">
+                <table className="w-full" data-oid="a.rw6-m">
+                    <thead data-oid="n:6op65">
+                        <tr className="border-b" data-oid="71kixl7">
+                            <th className="text-left py-2" data-oid="8g8rc61">
                                 SNo
                             </th>
-                            <th className="text-left py-2" data-oid="8:3co1p">
+                            <th className="text-left py-2" data-oid="9o2g9po">
                                 Name
                             </th>
-                            <th className="text-left py-2" data-oid="_:f5l93">
+                            <th className="text-left py-2" data-oid="q3kj5jy">
                                 Type
                             </th>
-                            <th className="text-left py-2" data-oid="2:b08rd">
+                            <th className="text-left py-2" data-oid="2tiik.z">
                                 Action
                             </th>
                         </tr>
                     </thead>
-                    <tbody data-oid="o3ikg8:">
+                    <tbody data-oid="w0dabvh">
                         {documents.map((doc) => (
-                            <tr key={doc.id} className="border-b" data-oid="6vf_pxf">
-                                <td className="py-3" data-oid="d-_04ad">
+                            <tr key={doc.id} className="border-b" data-oid="i5s:6u8">
+                                <td className="py-3" data-oid="j9fn2qq">
                                     {doc.id}
                                 </td>
-                                <td className="py-3 text-blue-600" data-oid="msp912h">
+                                <td className="py-3 text-blue-600" data-oid="5dpaox2">
                                     {doc.name}
                                 </td>
-                                <td className="py-3" data-oid="3k_zy7g">
-                                    <div className="flex items-center gap-2" data-oid="zq4.ugb">
-                                        <Folder className="w-5 h-5" data-oid="9070:0h" />
+                                <td className="py-3" data-oid="fmcmfds">
+                                    <div className="flex items-center gap-2" data-oid="iusjtsz">
+                                        <Folder className="w-5 h-5" data-oid="ujjug98" />
                                     </div>
                                 </td>
-                                <td className="py-3" data-oid="c1c83lp">
-                                    <div className="flex gap-2" data-oid="g2:g_m7">
+                                <td className="py-3" data-oid=".pri3r5">
+                                    <div className="flex gap-2" data-oid="c4ja7bv">
                                         <Button
                                             size="icon"
                                             variant="ghost"
                                             className="text-blue-600"
-                                            data-oid="w:ihvia"
+                                            data-oid="64y-q14"
                                         >
-                                            <Eye className="w-4 h-4" data-oid="xnd.0yq" />
+                                            <Eye className="w-4 h-4" data-oid="q34y0pj" />
                                         </Button>
                                         <Button
                                             size="icon"
                                             variant="ghost"
                                             className="text-red-600"
-                                            data-oid="chs1h2o"
+                                            data-oid="qmoy9he"
                                         >
-                                            <Trash2 className="w-4 h-4" data-oid="vy6.3gk" />
+                                            <Trash2 className="w-4 h-4" data-oid="zb935.u" />
                                         </Button>
-                                        <Button size="icon" variant="ghost" data-oid="u2gdnll">
-                                            <Share className="w-4 h-4" data-oid="awamrw-" />
+                                        <Button size="icon" variant="ghost" data-oid="crcm_hw">
+                                            <Share className="w-4 h-4" data-oid="u_o1ezc" />
                                         </Button>
-                                        <Button size="icon" variant="ghost" data-oid="dob-nvs">
-                                            <Edit className="w-4 h-4" data-oid="z95o:z8" />
+                                        <Button size="icon" variant="ghost" data-oid="6dwnrci">
+                                            <Edit className="w-4 h-4" data-oid="92uc415" />
                                         </Button>
                                     </div>
                                 </td>
@@ -129,78 +129,78 @@ export function InboxContent() {
                 </table>
             </div>
 
-            <div className="mb-8" data-oid="ubonjgw">
-                <h2 className="text-xl font-semibold mb-4" data-oid="op1ujbb">
+            <div className="mb-8" data-oid="8ia:813">
+                <h2 className="text-xl font-semibold mb-4" data-oid="sfmewld">
                     Files that need my approval
                 </h2>
-                <table className="w-full" data-oid="zc:l11m">
-                    <thead data-oid="wlc-bw-">
-                        <tr className="border-b" data-oid="dxghpps">
-                            <th className="text-left py-2" data-oid="nv:7bb6">
+                <table className="w-full" data-oid="wh73zpc">
+                    <thead data-oid="zeai3on">
+                        <tr className="border-b" data-oid="4ta2nbk">
+                            <th className="text-left py-2" data-oid="pe71ybl">
                                 SNo
                             </th>
-                            <th className="text-left py-2" data-oid="qua6zwd">
+                            <th className="text-left py-2" data-oid="b8d8fyo">
                                 File Name
                             </th>
-                            <th className="text-left py-2" data-oid="jqd2y..">
+                            <th className="text-left py-2" data-oid="ry14tte">
                                 Assigned At
                             </th>
-                            <th className="text-left py-2" data-oid="op0-t5z">
+                            <th className="text-left py-2" data-oid="lqd_8vm">
                                 Status
                             </th>
                         </tr>
                     </thead>
-                    <tbody data-oid=":f..b8e"></tbody>
+                    <tbody data-oid=":48ofe:"></tbody>
                 </table>
             </div>
 
-            <div className="mb-8" data-oid="isgc0ng">
-                <h2 className="text-xl font-semibold mb-4" data-oid="ke4miup">
+            <div className="mb-8" data-oid="hu7s_vr">
+                <h2 className="text-xl font-semibold mb-4" data-oid="8x2nma2">
                     Files that need my electronic signature
                 </h2>
-                <table className="w-full" data-oid="upwndzl">
-                    <thead data-oid="aiq8vcm">
-                        <tr className="border-b" data-oid=":v1rb4x">
-                            <th className="text-left py-2" data-oid="iygdbjf">
+                <table className="w-full" data-oid="h__ec8y">
+                    <thead data-oid="d5od45r">
+                        <tr className="border-b" data-oid="oggl-81">
+                            <th className="text-left py-2" data-oid=":--_35u">
                                 SNo
                             </th>
-                            <th className="text-left py-2" data-oid="t0j6pvz">
+                            <th className="text-left py-2" data-oid="an08qmp">
                                 File Name
                             </th>
-                            <th className="text-left py-2" data-oid="usaykj4">
+                            <th className="text-left py-2" data-oid="_1smm5s">
                                 Assigned At
                             </th>
-                            <th className="text-left py-2" data-oid="d-z4ycf">
+                            <th className="text-left py-2" data-oid="h11d567">
                                 Status
                             </th>
                         </tr>
                     </thead>
-                    <tbody data-oid="88hfk3r"></tbody>
+                    <tbody data-oid="6tw2v_e"></tbody>
                 </table>
             </div>
 
-            <div data-oid="ox2vomg">
-                <h2 className="text-xl font-semibold mb-4" data-oid="qxeftec">
+            <div data-oid="7w44_mk">
+                <h2 className="text-xl font-semibold mb-4" data-oid="usz-7vx">
                     Files that need my acknowledge
                 </h2>
-                <table className="w-full" data-oid="4pc:n4s">
-                    <thead data-oid="thsbnk_">
-                        <tr className="border-b" data-oid="dd1ijms">
-                            <th className="text-left py-2" data-oid="3-tkyle">
+                <table className="w-full" data-oid="6y64un9">
+                    <thead data-oid="6zddack">
+                        <tr className="border-b" data-oid="5bcjl06">
+                            <th className="text-left py-2" data-oid="jfbbh4w">
                                 SNo
                             </th>
-                            <th className="text-left py-2" data-oid="9pp7tvy">
+                            <th className="text-left py-2" data-oid="jx4vest">
                                 File Name
                             </th>
-                            <th className="text-left py-2" data-oid="xsejae2">
+                            <th className="text-left py-2" data-oid="7nicgng">
                                 Assigned At
                             </th>
-                            <th className="text-left py-2" data-oid="3l9le0_">
+                            <th className="text-left py-2" data-oid="2yww6:p">
                                 Status
                             </th>
                         </tr>
                     </thead>
-                    <tbody data-oid="jxvvs_t"></tbody>
+                    <tbody data-oid=":aktfp6"></tbody>
                 </table>
             </div>
         </div>

@@ -40,7 +40,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const login = async (username: string, password: string) => {
         // TODO: Implement actual authentication logic
         if (username && password) {
+            // Set a dummy token for demo purposes
+            localStorage.setItem('token', 'demo-token');
             setIsAuthenticated(true);
+            router.push('/companies');
+        } else {
+            throw new Error('Invalid credentials');
         }
     };
 
@@ -61,7 +66,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
                 logout,
                 setSelectedCompany,
             }}
-            data-oid="0_7dvx3"
+            data-oid="_8xuas."
         >
             {children}
         </AuthContext.Provider>
